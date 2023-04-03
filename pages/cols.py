@@ -8,7 +8,11 @@ with col1:
 
 with col2:
     col2.header("This should be in the center")
+    my_image = st.camera_input("Take your picture")
 
 with col3:
     col3.header("This is hanging out on the right")
+    if my_image:
+        st.write(my_image)
+        
 

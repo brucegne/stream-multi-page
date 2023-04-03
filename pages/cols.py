@@ -14,8 +14,8 @@ with col2:
 with col3:
     col3.header("This is hanging out on the right")
     if my_image:
-        st.write(my_image)
+        st.image(my_image)
     if my_upload:
-        st.write(my_upload)
+        st.image(my_upload)
 
 

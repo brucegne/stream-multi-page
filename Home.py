@@ -46,8 +46,8 @@ df = pd.DataFrame(ws.get_all_records())
 st.write(df)
 
 response = requests.get("https://hfpintranet.appspot.com/dailyjson")
-recs = response.json()
-results = json.dumps(recs['records']) 
+recs = response.text
+results = json.dumps(recs) 
 
 df3 = pd.DataFrame(results)
 st.write(df3.sort_values(by=['buyer','location']))

@@ -49,7 +49,7 @@ response = requests.get("https://hfpintranet.appspot.com/dailyjson")
 recs = response.json()
 results = recs['records']
 
-for i in range(5):
+for i in range(25):
     rec = results[i]
     st.write(rec['location'], rec['basis'])
 #    st.write(results[i])

@@ -50,7 +50,9 @@ recs = response.json()
 results = recs['records']
 
 for i in range(5):
-    st.write(results[i])
+    rec = results[i]
+    st.write(rec['locaton'], rec['basis'])
+#    st.write(results[i])
                    
 res = ws.get_all_records()
 

@@ -54,8 +54,8 @@ df3 = pd.DataFrame(results)
 df3 = df3.sort_values(by=['commodity','buyer','location'])[['buyer','location','commodity','basis']]
 st.write(df3.head(50))
 
-df3.plot(legend=False)
-plt.show()
+df3.plot()
+st.write(plt.show())
 
 
 for i in range(25):

@@ -56,7 +56,7 @@ st.write(df3.head(50))
 
 df3.plot(kind='scatter',x='buyer', y='basis')
 
-st.write(plt.show())
+# st.write(plt.show())
 
 for i in range(25):
     rec = results[i]

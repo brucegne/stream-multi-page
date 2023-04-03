@@ -49,6 +49,9 @@ response = requests.get("https://hfpintranet.appspot.com/dailyjson")
 recs = response.json()
 results = recs['records']
 
+df3 = pd.DataFrame(results)
+st.write(df3)
+
 for i in range(25):
     rec = results[i]
     st.write(i, '---', rec['buyer'],'---' ,rec['location'], '---', rec['basis'])

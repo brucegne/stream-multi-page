@@ -49,7 +49,7 @@ response = requests.get("https://hfpintranet.appspot.com/dailyjson")
 recs = response.json()
 results = recs['records']
 
-for i in range(20):
+for i in range(5):
     st.write(results[i])
                    
 res = ws.get_all_records()

@@ -47,7 +47,7 @@ st.write(df)
 
 response = requests.get("https://hfpintranet.appspot.com/dailyjson")
 recs = response.json()
-result = json.dumps(recs['records'], 
+result = json.dumps(recs['records']) 
 
 df3 = pd.DataFrame(results)
 st.write(df3.sort_values(by='location'))

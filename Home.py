@@ -51,4 +51,4 @@ array = np.array([[1, 2, 3], [4, 5, 6]])
 
 # Write the array to worksheet starting from the A2 cell
 # ws.update('A12', array.tolist())
-st.write(ws.get_all_values())
+# st.write(ws.get_all_values())

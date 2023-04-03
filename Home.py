@@ -2,6 +2,8 @@ import streamlit as st
 import gspread
 import pandas as pd
 import numpy as np
+import requests, json
+
 
 
 st.title("Welcome to StreamLit")
@@ -42,6 +44,9 @@ st.write(ws.row_values(3)[0])
 df = pd.DataFrame(ws.get_all_records())
 # st.dataframe(df, use_container_width=True)
 st.write(df)
+
+res = requests.get("https://hfpintranet.appspot.com/dailyjson")
+df.write(res.json)
 
 df2 = pd.DataFrame(pd.read_json("http://hfpintranet.appspot.com/dailyjson"))
 df2

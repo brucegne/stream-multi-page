@@ -5,8 +5,6 @@ import matplotlib.pyplot as plt
 import numpy as np
 import requests, json
 
-
-
 st.title("Welcome to StreamLit")
 report_line = ['And a 1', 'And a 2', 'Time', 'And a 3']
 

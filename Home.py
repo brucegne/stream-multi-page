@@ -50,7 +50,7 @@ recs = response.json()
 results = recs['records']
 
 df3 = pd.DataFrame(results)
-st.write(df3.sort_values(by='buyer'))
+st.write(df3.sort_values(by='location'))
 
 for i in range(25):
     rec = results[i]

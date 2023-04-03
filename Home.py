@@ -52,7 +52,7 @@ results = recs['records']
 for i in range(5):
     rec = results[i]
     st.write(rec['location'], rec['basis'])
-    st.write(results[i])
+#    st.write(results[i])
                    
 res = ws.get_all_records()
 

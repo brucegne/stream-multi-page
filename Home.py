@@ -47,12 +47,10 @@ st.write(df)
 
 response = requests.get("https://hfpintranet.appspot.com/dailyjson")
 recs = response.json()
+results = recs['records']
 
-# st.write(recs['records'])
-
-
-df2 = pd.DataFrame(recs)
-st.write(df2.head(15))
+for i in range(20):
+    st.write(results[i]['Location']))
                    
 res = ws.get_all_records()
 

@@ -38,7 +38,8 @@ st.write(ws.row_values(3)[0])
 # print(sh.sheet1.row_values(4))
 
 df = pd.DataFrame(ws.get_all_records())
-st.write(df)
+st.dataframe(df, use_container_width=True)
+# st.write(df)
 
 res = ws.get_all_records()
 

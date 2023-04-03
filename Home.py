@@ -1,6 +1,7 @@
 import streamlit as st
 import gspread
 import pandas as pd
+import matplotlib.pyplot as plt
 import numpy as np
 import requests, json
 
@@ -52,6 +53,8 @@ results = recs['records']
 df3 = pd.DataFrame(results)
 df3 = df3.sort_values(by=['commodity','buyer','location'])[['buyer','location','commodity','basis']]
 st.write(df3.head(50))
+
+df3.plot(legend=False)
 
 for i in range(25):
     rec = results[i]

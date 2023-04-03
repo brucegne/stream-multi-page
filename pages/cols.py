@@ -9,7 +9,7 @@ with col1:
 with col2:
     col2.header("This should be in the center")
     my_upload = st.file_uploader("Upload a local photo")
-    my_image = st.camera_input("Take your picture")
+    my_image = st.camera_input("Take your picture", disabled=False)
 
 with col3:
     col3.header("This is hanging out on the right")

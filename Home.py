@@ -41,7 +41,7 @@ df = pd.DataFrame(ws.get_all_records())
 st.dataframe(df, use_container_width=True)
 st.write(df)
 
-res = ws.get_all_records()
+# res = ws.get_all_records()
 
 for rec in res:
     st.write(rec['Name'])

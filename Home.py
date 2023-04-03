@@ -55,6 +55,8 @@ df3 = df3.sort_values(by=['commodity','buyer','location'])[['buyer','location','
 st.write(df3.head(50))
 
 df3.plot(legend=False)
+plt.show()
+
 
 for i in range(25):
     rec = results[i]

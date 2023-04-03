@@ -54,7 +54,7 @@ df3 = pd.DataFrame(results)
 df3 = df3.sort_values(by=['commodity','buyer','location'])[['buyer','location','commodity','basis']]
 st.write(df3.head(50))
 
-df3.plot(kind='scatter')
+df3.plot(kind='scatter',x='buyer', y='basis')
 
 st.write(plt.show())
 

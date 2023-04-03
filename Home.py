@@ -51,7 +51,7 @@ results = recs['records']
 
 for i in range(25):
     rec = results[i]
-    st.write(rec['buyer'],rec['location'], rec['basis'])
+    st.write(i, '---', rec['buyer'],'---' ,rec['location'], '---', rec['basis'])
 #    st.write(results[i])
                    
 res = ws.get_all_records()

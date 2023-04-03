@@ -51,7 +51,7 @@ results = recs['records']
 
 df3 = pd.DataFrame(results)
 df3 = df3.sort_values(by=['buyer','location'])
-st.write(df3.head(25))
+st.write(df3.head(45))
 
 for i in range(25):
     rec = results[i]

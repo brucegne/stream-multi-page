@@ -52,7 +52,7 @@ recs = response.json()
 
 
 df2 = pd.DataFrame(recs)
-st.write(df2.head())
+st.write(df2.head(15))
                    
 res = ws.get_all_records()
 

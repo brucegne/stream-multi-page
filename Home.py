@@ -41,8 +41,8 @@ df = pd.DataFrame(ws.get_all_records())
 # st.dataframe(df, use_container_width=True)
 st.write(df)
 
-df2 = pd.DataFrame(pd.read_json("http://hfpintranet.appspot.com/dailyjson")
-df2.head()
+df2 = pd.DataFrame(pd.read_json("http://hfpintranet.appspot.com/dailyjson"))
+df2
                    
 res = ws.get_all_records()
 

@@ -48,11 +48,11 @@ st.write(df)
 response = requests.get("https://hfpintranet.appspot.com/dailyjson")
 recs = response.json()
 
-st.write(recs['records'])
+# st.write(recs['records'])
 
 
-df2 = pd.DataFrame(pd.read_json("http://hfpintranet.appspot.com/dailyjson"))
-df2
+df2 = pd.DataFrame(recs)
+st.write(df2.head())
                    
 res = ws.get_all_records()
 

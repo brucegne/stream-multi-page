@@ -14,6 +14,7 @@ with col2:
 with col3:
     col3.header("This is hanging out on the right")
     if my_image:
+        st.success("You got the picture")
         st.image(my_image)
     if my_upload:
         st.image(my_upload)

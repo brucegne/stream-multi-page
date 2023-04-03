@@ -41,6 +41,9 @@ df = pd.DataFrame(ws.get_all_records())
 st.dataframe(df, use_container_width=True)
 # st.write(df)
 
+df = pd.read_csv("https://github.com/datasciencedojo/datasets/blob/master/titanic.csv")
+st.write(df.head())
+
 res = ws.get_all_records()
 
 for rec in res:

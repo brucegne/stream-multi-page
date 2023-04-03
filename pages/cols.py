@@ -1,6 +1,6 @@
 import streamlit as st
 
-col1, col2, col3 = st.columns(1,2,1)
+col1, col2, col3 = st.columns([1,2,1])
 
 with col1:
     col1.header("This is on the left")

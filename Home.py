@@ -33,49 +33,12 @@ st.write(ws.get('B4'))
 
 st.write(ws.acell("B4").value)
 
-# ws.update("B4", "Bingo !!!")
-
 st.write(sh.worksheets())
 
 st.write(ws.row_values(3)[0])
 
-# print(sh.sheet1.row_values(4))
-
 df = pd.DataFrame(ws.get_all_records())
 
-# AgGrid(df)
 ele = st.bar_chart(df)
 st.dataframe(df)
 
-# st.dataframe(df, use_container_width=True)
-# st.write(df)
-"""
-response = requests.get("https://hfpintranet.appspot.com/dailyjson")
-recs = response.json()
-results = recs['records']
-
-df2 = pd.DataFrame(results)
-# df3 = df32.sort_values(by=['commodity','buyer','location'])[['buyer','location','commodity','basis']]
-
-df4 = df2.groupby('commodity').mean()
-ele = st.line_chart(df4)
-
-
-for i in range(25):
-    rec = results[i]
-    st.write(i, '---', rec['buyer'],'---' ,rec['location'], '---', rec['basis'])
-#    st.write(results[i])
-                   
-res = ws.get_all_records()
-
-for rec in res:
-    st.write(rec['Name'])
-    
-# ws.append_row(report_line)
-
-array = np.array([[1, 2, 3], [4, 5, 6]])
-
-# Write the array to worksheet starting from the A2 cell
-# ws.update('A12', array.tolist())
-# st.write(ws.get_all_values())
-"""

@@ -56,7 +56,7 @@ st.write(df3.head(50))
 x=df3.commodity
 y=df3.basis
 
-st.write(x)
+st.write(y)
 
 # plt.bar(y)
 # plt.show()

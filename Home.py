@@ -58,7 +58,7 @@ df2 = pd.DataFrame(results)
 
 df4 = df2.groupby('commodity').mean()
 
-st.write(df4)
+AgGrid(df4)
 
 for i in range(25):
     rec = results[i]

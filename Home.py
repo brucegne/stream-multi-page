@@ -46,7 +46,7 @@ df = pd.DataFrame(ws.get_all_records())
 
 # AgGrid(df)
 ele = st.bar_chart(df)
-st.dataframe(df, use_container_width=True)
+st.table(df, use_container_width=True)
 
 # st.dataframe(df, use_container_width=True)
 # st.write(df)

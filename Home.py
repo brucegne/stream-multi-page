@@ -39,6 +39,6 @@ st.write(ws.row_values(3)[0])
 
 df = pd.DataFrame(ws.get_all_records())
 
-ele = st.bar_chart(df)
+ele = st.line_chart(df)
 st.dataframe(df)
 

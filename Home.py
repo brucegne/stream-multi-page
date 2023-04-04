@@ -17,18 +17,6 @@ sh = gc.open("WeddingApp")
 
 ws = sh.worksheet("System")
 
-# ws.update("B4", "Wedding")
-
-try:
-    cell = ws.find("KEY101")
-    if cell:
-        st.write(cell.row, cell.col)
-        st.write("Found something at R%sC%s" % (cell.row, cell.col))
-    else:
-        st.write("Doesn't exist")
-except:
-    st.write("Key value not found")
-    
 st.write(ws.get('B4'))
 
 st.write(ws.acell("B4").value)

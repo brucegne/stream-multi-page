@@ -44,7 +44,7 @@ st.write(ws.row_values(3)[0])
 
 df = pd.DataFrame(ws.get_all_records())
 
-AgGrid(df)
+# AgGrid(df)
 ele = st.line_chart(df)
 st.dataframe(df, use_container_width=True)
 
@@ -59,6 +59,7 @@ df2 = pd.DataFrame(results)
 # df3 = df32.sort_values(by=['commodity','buyer','location'])[['buyer','location','commodity','basis']]
 
 df4 = df2.groupby('commodity').mean()
+ele = st.line_chart(df4)
 
 AgGrid(df4)
 

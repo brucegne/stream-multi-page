@@ -45,6 +45,7 @@ st.write(ws.row_values(3)[0])
 df = pd.DataFrame(ws.get_all_records())
 
 AgGrid(df)
+st.dataframe(df, use_container_width=True)
 
 # st.dataframe(df, use_container_width=True)
 # st.write(df)

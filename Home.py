@@ -49,19 +49,12 @@ response = requests.get("https://hfpintranet.appspot.com/dailyjson")
 recs = response.json()
 results = recs['records']
 
-df3 = pd.DataFrame(results)
+df2 = pd.DataFrame(results)
 df3 = df3.sort_values(by=['commodity','buyer','location'])[['buyer','location','commodity','basis']]
-st.write(df3)
 
-x=df3.commodity
-y=df3.basis
+df4 = df2.groupby('commodity').mean()
 
-# st.write(x)
-
-# plt.bar(y)
-# plt.show()
-
-# st.write(plt.show())
+st.write(df4)
 
 for i in range(25):
     rec = results[i]

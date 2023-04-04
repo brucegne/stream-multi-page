@@ -49,6 +49,10 @@ response = requests.get("https://hfpintranet.appspot.com/dailyjson")
 recs = response.json()
 results = recs['records']
 
+df3 = pd.DataFrame(results)
+df3.set_index('ent_date', inplace=True)
+df3.groupby('commodity')['basis'].plot(legend=True)
+
 df3 = df3.sort_values(by=['commodity','buyer','location'])[['buyer','location','commodity','basis']]
 st.write(df3.commodity > ['Corn'])
 st.write(df3.head(50))

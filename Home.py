@@ -1,5 +1,4 @@
 import streamlit as st
-from st_aggrid import AgGrid
 import gspread
 import pandas as pd
 import matplotlib.pyplot as plt

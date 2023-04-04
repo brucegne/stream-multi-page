@@ -1,7 +1,7 @@
 import streamlit as st
 import time, json
 
-""" :archie-fill:
+""" :archive-fill:
 :boat:
 
 # This is the *About Page*

@@ -47,7 +47,7 @@ df = pd.DataFrame(ws.get_all_records())
 AgGrid(df)
 
 # st.dataframe(df, use_container_width=True)
-st.write(df)
+# st.write(df)
 
 response = requests.get("https://hfpintranet.appspot.com/dailyjson")
 recs = response.json()

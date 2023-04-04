@@ -52,7 +52,7 @@ results = recs['records']
 df3 = pd.DataFrame(results)
 df3 = df3.sort_values(by=['commodity','buyer','location'])[['buyer','location','commodity','basis']]
 # st.write(df3.commodity == 'Corn')
-# st.write(df3.head(50))
+st.write(df3.head(50))
 
 df3.plot(kind='scatter',x='buyer', y='basis')
 

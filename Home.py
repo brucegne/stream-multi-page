@@ -53,8 +53,10 @@ df3 = pd.DataFrame(results)
 df3 = df3.sort_values(by=['commodity','buyer','location'])[['buyer','location','commodity','basis']]
 st.write(df3.head(50))
 
-# x=df3.commodity
-# y=df3.basis
+x=df3.commodity
+y=df3.basis
+
+st.write(x)
 
 # plt.bar(y)
 # plt.show()

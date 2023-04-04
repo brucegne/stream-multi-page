@@ -57,7 +57,8 @@ st.write(df3.head(50))
 x=df3.buyer
 x=df3.basis
 
-st.write(plt.scatter(x,y))
+plt.scatter(x,y)
+plt.show()
 
 # st.write(plt.show())
 

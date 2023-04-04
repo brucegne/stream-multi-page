@@ -39,6 +39,6 @@ st.write(ws.row_values(3)[0])
 
 df = pd.DataFrame(ws.get_all_records())
 
-ele = st.line_chart(df,x=country, y=2021)
+ele = st.line_chart(df,x="country", y="2021")
 st.dataframe(df)
 

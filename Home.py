@@ -57,7 +57,7 @@ st.write(df3.head(50))
 x=df3.commodity
 y=df3.basis
 
-plt.scatter(x, y)
+plt.hbar(y)
 plt.show()
 
 # st.write(plt.show())

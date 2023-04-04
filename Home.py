@@ -54,7 +54,10 @@ df3 = df3.sort_values(by=['commodity','buyer','location'])[['buyer','location','
 # st.write(df3.commodity == 'Corn')
 st.write(df3.head(50))
 
-df3.plot(kind='scatter',x='buyer', y='basis')
+x=df3.buyer
+x=df3.basis
+
+st.write(plt.scatter(x,y))
 
 # st.write(plt.show())
 

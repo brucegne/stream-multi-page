@@ -15,7 +15,7 @@ sh = gc.open("WeddingApp")
 
 # ws2 = sh.add_worksheet(title="System", rows=10, cols=5)
 
-ws = sh.worksheet("Attractions")
+ws = sh.worksheet("System")
 
 # ws.update("B4", "Wedding")
 

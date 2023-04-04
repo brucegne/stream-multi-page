@@ -1,4 +1,5 @@
 import streamlit as st
+from st_aggrid import AgGrid
 import gspread
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -42,6 +43,7 @@ st.write(ws.row_values(3)[0])
 # print(sh.sheet1.row_values(4))
 
 df = pd.DataFrame(ws.get_all_records())
+AgGrid(df)
 # st.dataframe(df, use_container_width=True)
 st.write(df)
 

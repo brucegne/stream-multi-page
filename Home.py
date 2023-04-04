@@ -50,7 +50,7 @@ recs = response.json()
 results = recs['records']
 
 df2 = pd.DataFrame(results)
-df3 = df3.sort_values(by=['commodity','buyer','location'])[['buyer','location','commodity','basis']]
+df3 = df32.sort_values(by=['commodity','buyer','location'])[['buyer','location','commodity','basis']]
 
 df4 = df2.groupby('commodity').mean()
 

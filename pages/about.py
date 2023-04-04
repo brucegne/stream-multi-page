@@ -2,8 +2,7 @@ import streamlit as st
 import time, json
 
 """ 
-:camera:
-:boat:  :wastebasket:
+#:camera:  :boat:  :wastebasket:
 
 
 # This is the *About Page*

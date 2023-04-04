@@ -3,7 +3,8 @@ import time, json
 
 """ 
 :camera:
-:boat:
+:boat:  :wastebasket:
+
 
 # This is the *About Page*
 """

@@ -23,7 +23,7 @@ st.write(ws.acell("B4").value)
 
 st.write(sh.worksheets())
 
-st.write(ws.row_values(3)[0])
+# st.write(ws.row_values(3)[0])
 
 df = pd.DataFrame(ws.get_all_records())
 

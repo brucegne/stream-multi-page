@@ -51,14 +51,14 @@ results = recs['records']
 
 df3 = pd.DataFrame(results)
 df3 = df3.sort_values(by=['commodity','buyer','location'])[['buyer','location','commodity','basis']]
-# st.write(df3.commodity == 'Corn')
+st.write(df3.commodity == ['Corn'])
 st.write(df3.head(50))
 
-x=df3.commodity
-y=df3.basis
+# x=df3.commodity
+# y=df3.basis
 
-plt.bar(y)
-plt.show()
+# plt.bar(y)
+# plt.show()
 
 # st.write(plt.show())
 

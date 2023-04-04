@@ -49,7 +49,7 @@ st.dataframe(df)
 
 # st.dataframe(df, use_container_width=True)
 # st.write(df)
-
+"""
 response = requests.get("https://hfpintranet.appspot.com/dailyjson")
 recs = response.json()
 results = recs['records']
@@ -60,7 +60,6 @@ df2 = pd.DataFrame(results)
 df4 = df2.groupby('commodity').mean()
 ele = st.line_chart(df4)
 
-AgGrid(df4)
 
 for i in range(25):
     rec = results[i]
@@ -79,3 +78,4 @@ array = np.array([[1, 2, 3], [4, 5, 6]])
 # Write the array to worksheet starting from the A2 cell
 # ws.update('A12', array.tolist())
 # st.write(ws.get_all_values())
+"""

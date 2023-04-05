@@ -8,4 +8,4 @@ work_url = 'https://socialpancakes-d1dad.firebaseio.com/Users.json'
 
 df = pd.read_json(work_url)
 df
-st.write(df["key"])
+st.write(st.dataframe(df))

@@ -1,11 +1,12 @@
 import streamlit as st
 import requests
 import pandas as pd
+from openpyxl import Workbook
 
-work_url = 'https://socialpancakes-d1dad.firebaseio.com/Users.json'
+workbook = Workbook()
+sheet = workbook.active
 
-# res = request.get(work_url).json()
+sheet["A1"] = "hello"
+sheet["B1"] = "world!"
 
-df = pd.read_json(work_url)
-
-st.dataframe(df)
+workbook.save(filename="hello_world.xlsx")

@@ -4,3 +4,5 @@ numpy
 gspread
 requests
 matplotlib
+openpyxl
+

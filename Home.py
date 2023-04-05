@@ -5,6 +5,10 @@ import matplotlib.pyplot as plt
 import numpy as np
 import requests, json
 
+st.set_page_config(page_title="Just messing around",
+                    page_icon=":bar_chart:",
+                    "layout="wide")
+                    
 st.title("Welcome to StreamLit")
 
 report_line = ['And a 1', 'And a 2', 'Time', 'And a 3']

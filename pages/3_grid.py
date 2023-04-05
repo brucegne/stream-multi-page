@@ -7,8 +7,8 @@ from openpyxl import load_workbook
 workbook = Workbook()
 sheet = workbook.active
 
-sheet["A1"] = "hello"
-sheet["B1"] = "world!"
+#sheet["A1"] = "hello"
+#sheet["B1"] = "world!"
 
 workbook.save(filename="hello_world.xlsx")
 st.write("It worked!")
@@ -18,8 +18,7 @@ st.write(workbook.sheetnames)
 
 
 sheet = workbook.active
-st.write(sheet["A1"].value)
-st.write(sheet["B1"].value)
-
-
-st.write(sheet.title)
+st.write(sheet['A1'].value)
+st.write(sheet['B1'].value)
+sheet['B1'] = "Yep it works !!!"
+st.write(sheet['B1'].value)

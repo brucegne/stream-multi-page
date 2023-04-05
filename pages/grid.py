@@ -1,5 +1,11 @@
-from st_aggrid import AgGrid
+import streamliv as st
+import requests
 import pandas as pd
 
-df = pd.read_csv('https://raw.githubusercontent.com/fivethirtyeight/data/master/airline-safety/airline-safety.csv')
-AgGrid(df)
+work_url = 'https://socialpancakes-d1dad.firebaseio.com/Users.json'
+
+# res = request.get(work_url).json()
+
+df = pd.read_json(work_url)
+
+st.write(df)

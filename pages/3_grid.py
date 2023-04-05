@@ -19,6 +19,7 @@ st.write(workbook.sheetnames)
 
 sheet = workbook.active
 st.write(sheet["A1"].value)
+st.write(sheet["B1"].value)
 
 
 st.write(sheet.title)

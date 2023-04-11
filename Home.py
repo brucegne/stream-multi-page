@@ -11,8 +11,8 @@ st.set_page_config(page_title="Nifty Stuff",
 
 st.title("Welcome to StreamLit")
 
-# report_line = ['And a 1', 'And a 2', 'Time', 'And a 3']
-# ws.append_row(report_line)
+report_line = ['And a 1', 'And a 2', 'Time', 'And a 3']
+ws.append_row(report_line)
 
 gc = gspread.service_account("secure.json")
 

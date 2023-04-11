@@ -11,13 +11,11 @@ st.set_page_config(page_title="Nifty Stuff",
 
 st.title("Welcome to StreamLit")
 
+gc = gspread.service_account("secure.json")
+sh = gc.open("WeddingApp")
 ws = sh.worksheet("System")
-
 report_line = ['And a 1', 'And a 2', 'Time', 'And a 3']
 ws.append_row(report_line)
-
-gc = gspread.service_account("secure.json")
-
 sh = gc.open("WeddingApp")
 
 # ws2 = sh.add_worksheet(title="System", rows=10, cols=5)

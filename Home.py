@@ -28,5 +28,5 @@ st.write(ws.acell("B4").value)
 
 st.write(sh.worksheets())
 
-df = pd.DataFrame(ws.get_all_records())
+df = pd.DataFrame(ws.get_all_values())
 

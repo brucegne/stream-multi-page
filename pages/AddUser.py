@@ -14,7 +14,7 @@ user_url = 'https://socialpancakes-d1dad.firebaseio.com/bdata/Users/%s.json'
 form =  st.form(key='editform1234',clear_on_submit=True)
 user_name = form.text_input('User Name', value='')
 user_email = form.text_input('User Email', value='')
-user_comments = form.text_area('Comments', height='125', value='')
+user_comments = form.text_area('Comments', value='')
 usr_submit = form.form_submit_button(label="Save Changes")
 if usr_submit:
     post_url = work_url

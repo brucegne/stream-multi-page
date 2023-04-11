@@ -30,6 +30,3 @@ st.write(sh.worksheets())
 
 df = pd.DataFrame(ws.get_all_records())
 
-ele = st.bar_chart(df,x="Country", y="2021")
-st.dataframe(df)
-

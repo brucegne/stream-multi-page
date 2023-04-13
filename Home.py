@@ -19,12 +19,12 @@ ws = sh.worksheet("titanic")
 try:
     cell = ws.find("KEY101")
     if cell:
-        print(cell.row, cell.col)
-        print("Found something at R%sC%s" % (cell.row, cell.col))
+        st.write(cell.row, cell.col)
+        st.write("Found something at R%sC%s" % (cell.row, cell.col))
     else:
-        print("Doesn't exist")
+        st.write("Doesn't exist")
 except:
-    print("Key value not found")
+    st.write("Key value not found")
     
 st.write(ws.get('B4'))
 
@@ -32,15 +32,13 @@ st.write(ws.acell("B4").value)
 
 # ws.update("B4", "Bingo !!!")
 
-# print(sh.worksheets())
+st.text(sh.worksheets())
 
 st.text(ws.row_values(3)[0])
 
 # print(sh.sheet1.row_values(4))
 
 # df = pd.DataFrame(ws.get_all_records())
-
-# pprint.pprint(df)
 
 res = ws.get_all_records()
 

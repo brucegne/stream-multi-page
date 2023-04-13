@@ -1,7 +1,7 @@
+import streamlit as st
 import gspread
 import pandas as pd
 import numpy as np
-import pprint
 
 report_line = ['And a 1', 'And a 2', 'Time', 'And a 3']
 
@@ -26,15 +26,15 @@ try:
 except:
     print("Key value not found")
     
-print(ws.get('B4'))
+st.write(ws.get('B4'))
 
-print(ws.acell("B4").value)
+st.write(ws.acell("B4").value)
 
 # ws.update("B4", "Bingo !!!")
 
 # print(sh.worksheets())
 
-print(ws.row_values(3)[0])
+st.text(ws.row_values(3)[0])
 
 # print(sh.sheet1.row_values(4))
 
@@ -46,4 +46,4 @@ res = ws.get_all_records()
 
 df = pd.DataFrame(ws.get_all_records())
 df = df.groupby(['Age','Survived', 'Pclass'], as_index = False).agg(Score = ('Age', 'min'))
-print(df)
+st.write(df)

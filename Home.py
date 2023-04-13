@@ -7,6 +7,8 @@ report_line = ['And a 1', 'And a 2', 'Time', 'And a 3']
 
 gc = gspread.service_account("secure.json")
 
+st.write(st.session_state)
+
 sh = gc.open("WorkDataBook")
 
 # ws2 = sh.add_worksheet(title="System", rows=10, cols=5)

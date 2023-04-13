@@ -1,33 +1,49 @@
-import streamlit as st
 import gspread
 import pandas as pd
-import matplotlib.pyplot as plt
 import numpy as np
-import requests, json
+import pprint
 
-st.set_page_config(page_title="Nifty Stuff",
-                    page_icon=":bar_chart:",
-                    layout="wide")
-
-st.title("Welcome to StreamLit")
+report_line = ['And a 1', 'And a 2', 'Time', 'And a 3']
 
 gc = gspread.service_account("secure.json")
-sh = gc.open("WeddingApp")
-ws = sh.worksheet("System")
-report_line = ['And a 1', 'And a 2', 'Time', 'And a 3']
-ws.append_row(report_line)
-sh = gc.open("WeddingApp")
+
+sh = gc.open("WorkDataBook")
 
 # ws2 = sh.add_worksheet(title="System", rows=10, cols=5)
 
-ws = sh.worksheet("System")
+ws = sh.worksheet("Attractions")
+ws = sh.worksheet("titanic")
 
-st.write(ws.get('B4'))
+# ws.update("B4", "Wedding")
 
-st.write(ws.acell("B4").value)
+try:
+    cell = ws.find("KEY101")
+    if cell:
+        print(cell.row, cell.col)
+        print("Found something at R%sC%s" % (cell.row, cell.col))
+    else:
+        print("Doesn't exist")
+except:
+    print("Key value not found")
+    
+print(ws.get('B4'))
 
-st.write(sh.worksheets())
+print(ws.acell("B4").value)
 
-df = pd.DataFrame(ws.get_all_values())
-st.write(df)
+# ws.update("B4", "Bingo !!!")
 
+# print(sh.worksheets())
+
+print(ws.row_values(3)[0])
+
+# print(sh.sheet1.row_values(4))
+
+# df = pd.DataFrame(ws.get_all_records())
+
+# pprint.pprint(df)
+
+res = ws.get_all_records()
+
+df = pd.DataFrame(ws.get_all_records())
+df = df.groupby(['Age','Survived', 'Pclass'], as_index = False).agg(Score = ('Age', 'min'))
+print(df)

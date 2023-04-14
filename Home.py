@@ -4,7 +4,7 @@ import pandas as pd
 import numpy as np
 import time, json
 
-print('KEY'+str(time.time()).split('.')[1])
+st.write('KEY'+str(time.time()).split('.')[1])
 
 report_line = ['And a 1', 'And a 2', 'Time', 'And a 3']
 
